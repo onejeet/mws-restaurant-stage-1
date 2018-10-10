@@ -8,27 +8,30 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
   <title>Restaurant Reviews</title>
 </head>
 
 <body>
-  <header>
+  <a id="skip-main" href="#filter-options">Skip to main content</a>
+  <header role="banner">
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent">
-    <section id="map-container">
+  <main id="maincontent" role="main">
+    <section id="map-container" role="application" aria-label="Google Map">
       <div id="map"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div class="filter-options" id="filter-options">
         <h2>Filter Results</h2>
+        <label for="neighborhoods-select">Neighborhood Places Filter</label>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
+        <label for="cuisines-select">Cuisines Filter</label>
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
@@ -42,8 +45,8 @@
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
 
 
-  <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  <footer id="footer" role="contentinfo">
+    Copyright (c) 2017 <a href="/" tabindex="-1"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
 </body>
