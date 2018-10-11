@@ -55,7 +55,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-transform: uppercase;
 }
 header {
-  position: sticky;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 10000;
