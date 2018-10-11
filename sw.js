@@ -6,7 +6,7 @@ if (navigator.serviceWorker) {
   });
 }
 
-//Cachingg
+//Caching
 const cacheName = 'onejeet-mws-restaurants-1';
 
 self.addEventListener('install', event => {
@@ -16,7 +16,7 @@ self.addEventListener('install', event => {
           '/',
           '/sw.js',
           '/css/styles.css',
-          '/css/font-awesome-min.css',
+          'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
           '/js/dbhelper.js',
           '/js/main.js',
           '/js/restaurant_info.js',
